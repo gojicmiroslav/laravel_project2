@@ -39,7 +39,9 @@ Route::get('error', function(){
 	return redirect('/');
 });
 
-
+Route::get('posts', 'PostsController@index');
+Route::get('show', 'PostsController@show');
+Route::get('test', 'PostsController@test');
 
 Auth::routes();
 
