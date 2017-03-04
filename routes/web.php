@@ -1,5 +1,13 @@
 <?php
 
+// trick to listen SQL performed
+DB::listen(function($query){
+	var_dump($query->sql, $query->bindings);
+});
+
+App\User::all();
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
